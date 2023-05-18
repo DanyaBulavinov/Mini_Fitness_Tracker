@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.projects.minifitnesstracker.ui.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_stepsFragment"
+            app:destination="@id/stepsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_waterFragment"
+            app:destination="@id/waterFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_BMI"
+            app:destination="@id/BMI" />
+        <action
+            android:id="@+id/action_mainFragment_to_sleepFragment"
+            app:destination="@id/sleepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stepsFragment"
+        android:name="com.projects.minifitnesstracker.ui.view.StepsFragment"
+        android:label="StepsFragment" >
+        <argument
+            android:name="current_date_tracking_data"
+            app:argType="com.projects.minifitnesstracker.model.TrackingData"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/waterFragment"
+        android:name="com.projects.minifitnesstracker.ui.view.WaterFragment"
+        android:label="WaterFragment" >
+        <argument
+            android:name="current_date_tracking_data"
+            app:argType="com.projects.minifitnesstracker.model.TrackingData"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/BMI"
+        android:name="com.projects.minifitnesstracker.ui.view.BmiFragment"
+        android:label="BMI" />
+    <fragment
+        android:id="@+id/sleepFragment"
+        android:name="com.projects.minifitnesstracker.ui.view.SleepFragment"
+        android:label="SleepFragment" >
+        <argument
+            android:name="amount_of_sleep"
+            app:argType="integer" />
+        <argument
+            android:name="current_date_tracking_data"
+            app:argType="com.projects.minifitnesstracker.model.TrackingData"
+            app:nullable="true" />
+    </fragment>
+</navigation>

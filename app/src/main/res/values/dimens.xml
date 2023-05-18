@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_margin_end">10dp</dimen>
+    <dimen name="layout_margin_CV">4dp</dimen>
+    <dimen name="padding_start_LL">20dp</dimen>
+    <dimen name="top_margin">15dp</dimen>
+    <dimen name="right_left_margins_for_tv">10dp</dimen>
+    <dimen name="bottom_margin">20dp</dimen>
+</resources>

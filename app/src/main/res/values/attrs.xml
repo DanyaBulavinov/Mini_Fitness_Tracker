@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="progress_color" format="color|reference" />
+    <attr name="background_color" format="color|reference" />
+    <attr name="plus_icon_color" format="color|reference" />
+    <attr name="button_background_color" format="color|reference" />
+    <attr name="on_button_color" format="color|reference" />
+    <declare-styleable name="BarChart">
+        <attr name="radius" format="integer" />
+    </declare-styleable>
+</resources>

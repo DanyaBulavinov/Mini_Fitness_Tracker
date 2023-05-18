@@ -1,0 +1,79 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 4,
+    "identityHash": "1e330342339e83e5275d8e67d32477c0",
+    "entities": [
+      {
+        "tableName": "tracking_data",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`weight` REAL, `height` REAL, `glasses_of_water` INTEGER DEFAULT 0, `amount_of_steps` INTEGER DEFAULT 0, `amount_of_sleep` INTEGER DEFAULT 0, `date` TEXT NOT NULL, `beginning_of_sleep` TEXT, `ending_of_sleep` TEXT, PRIMARY KEY(`date`))",
+        "fields": [
+          {
+            "fieldPath": "weight",
+            "columnName": "weight",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "height",
+            "columnName": "height",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "glassesOfWater",
+            "columnName": "glasses_of_water",
+            "affinity": "INTEGER",
+            "notNull": false,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "amountOfSteps",
+            "columnName": "amount_of_steps",
+            "affinity": "INTEGER",
+            "notNull": false,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "amountOfSleep",
+            "columnName": "amount_of_sleep",
+            "affinity": "INTEGER",
+            "notNull": false,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sleep.beginningOfSleep",
+            "columnName": "beginning_of_sleep",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sleep.endingOfSleep",
+            "columnName": "ending_of_sleep",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "date"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1e330342339e83e5275d8e67d32477c0')"
+    ]
+  }
+}

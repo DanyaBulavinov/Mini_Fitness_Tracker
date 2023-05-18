@@ -1,0 +1,72 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "baef9010b61a367c069501ad72d8e585",
+    "entities": [
+      {
+        "tableName": "tracking_data",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`weight` REAL, `height` REAL, `glasses_of_water` INTEGER DEFAULT 0, `amount_of_steps` INTEGER DEFAULT 0, `date` TEXT NOT NULL, `beginning_of_sleep` TEXT, `ending_of_sleep` TEXT, PRIMARY KEY(`date`))",
+        "fields": [
+          {
+            "fieldPath": "weight",
+            "columnName": "weight",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "height",
+            "columnName": "height",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "glassesOfWater",
+            "columnName": "glasses_of_water",
+            "affinity": "INTEGER",
+            "notNull": false,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "amountOfSteps",
+            "columnName": "amount_of_steps",
+            "affinity": "INTEGER",
+            "notNull": false,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sleep.beginningOfSleep",
+            "columnName": "beginning_of_sleep",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sleep.endingOfSleep",
+            "columnName": "ending_of_sleep",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "date"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'baef9010b61a367c069501ad72d8e585')"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Mini Fitness Tracker</string>
+    <string name="steps_label">Steps</string>
+    <string name="water_label">Water</string>
+    <string name="steps_goal"><b><big>%1s</big></b><small>/%2s</small></string>
+    <string name="amount_of_glasses"><b><big>%d</big></b><small> glasses</small></string>
+    <string name="all_steps_now_label">All steps, Now</string>
+    <string name="percentage_of_steps">%d %%</string>
+    <string name="sleep_label">Sleep</string>
+    <string name="bmi_text">Calculate body mass index</string>
+    <string name="sleep_time"><b><big>%d</big></b> <small>Hrs</small> <b><big>%d</big></b> <small>mins</small></string>
+    <string name="default_sleep_time"><b><big>0</big></b> <small>Hrs</small> <b><big>0</big></b> <small>mins</small></string>
+    <string name="steps_fragment_label">Enter steps</string>
+    <string name="sleep_fragment_enter_hours">Enter Hours</string>
+    <string name="sleep_fragment_enter_minutes">Enter Minutes</string>
+    <string name="age_edit_text">Age</string>
+    <string name="weight_edit_text">Weight</string>
+    <string name="height_edit_text">Height</string>
+    <string name="water_fragment_label">Enter glasses</string>
+    <string name="current_day_steps_label"><b><big>%d</big></b> <small>steps</small></string>
+    <string name="current_day_glasses_label"><b><big>%d</big></b> <small>glasses</small></string>
+    <string name="set_steps_button">Set steps</string>
+    <string name="set_sleep_button">Set sleep</string>
+    <string name="set_glasses_button">Set glasses</string>
+    <string name="error_input_steps">Invalid number</string>
+    <string name="bmi_calculator_label">BMI Calculator</string>
+    <string name="bmi_result_label">Result</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="bmi_label">BMI</string>
+    <string name="status_label">Weight Status</string>
+    <string name="bmi_score">%s</string>
+    <string name="string_score">%s</string>
+    <string name="empty_field"></string>
+    <string name="beginning_of_sleep_label">Beginning of Sleep</string>
+    <string name="ending_of_sleep_label">Ending of Sleep</string>
+</resources>
